@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// import logo from './logo.svg';
+// import './App.css';
+// import Home from "./view/Ashine";
+import One from "./view/One/One";
+import Player from "./view/player/Player";
+import { ConfigProvider } from "antd";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ConfigProvider theme={{ token: { colorPrimary: "#519aba" } }}>
+        <div>react test</div>
+        {/* <Home></Home> */}
+        <One></One>
+      </ConfigProvider>
+      <Player />
     </div>
   );
 }
