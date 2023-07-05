@@ -17,15 +17,11 @@ function Player() {
 
 export default Player;
 
-function Square() {
-  // const [value, setValue] = useState(null);
-  // const handleClick = () => {
-  //   console.log('click333');
-  //   setValue('O')
-  // }
+function Square({value,onSquareClick }) {
+  
   return (
     <>
-      <button className="square"></button>
+      <button className="square" onClick={onSquareClick}>{value}</button>
     </>
   );
 }
@@ -34,18 +30,23 @@ function Board() {
 
   // squares =  [null, null, null, null, null, null, null, null, null]
   const [ squares, setSquares] = useState(Array(9).fill(null))
+  const handleClick = (i) => {
+    const nextSquares = squares.slice()
+    nextSquares[i] = "X";
+    setSquares(nextSquares);
+  }
 
   return (
     <>
       <div className="board-row">
-        <Square value={squares[0]}/>
-        <Square value={squares[1]}/>
-        <Square value={squares[2]}/>
+        <Square value={squares[0]} onSquareClick={()=> handleClick(0)}/>
+        <Square value={squares[1]} onSquareClick={()=> handleClick(1)}/>
+        <Square value={squares[2]} onSquareClick={()=> handleClick(2)}/>
       </div>
       <div className="board-row">
-        <Square value={squares[3]}/>
-        <Square value={squares[4]}/>
-        <Square value={squares[5]}/>
+        <Square value={squares[3]} onSquareClick={()=> handleClick(3)}/>
+        <Square value={squares[4]} onSquareClick={()=> handleClick(4)}/>
+        <Square value={squares[5]} onSquareClick={()=> handleClick(5)}/>
       </div>
       <div className="board-row">
         <Square />
