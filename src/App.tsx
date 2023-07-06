@@ -2,8 +2,8 @@ import React from "react";
 // import logo from './logo.svg';
 // import './App.css';
 // import Home from "./view/Ashine";
-import One from "./view/One/One";
-import Player from "./view/player/Player";
+// import One from "./view/One/One";
+// import Player from "./view/player/Player";
 import { ConfigProvider } from "antd";
 // import Hooks from "./view/hooks/Hook";
 
@@ -14,9 +14,9 @@ function App() {
       <ConfigProvider theme={{ token: { colorPrimary: "#519aba" } }}>
         <div>react test</div>
         {/* <Home></Home> */}
-        <One></One>
+        {/* <One></One> */}
       </ConfigProvider>
-      <Player />
+      {/* <Player /> */}
     </div>
   );
 }
