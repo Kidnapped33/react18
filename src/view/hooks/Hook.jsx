@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import List from "./filterData/MapData";
 import Self from "./Self";
+import Three from "./Three";
 import Interaction from "./AddInteraction/Interaction";
 
 // useEffect
@@ -100,13 +101,25 @@ function State() {
 }
 
 function Hooks() {
-  console.log("Hooks");
-  // useEffect
+  const [hook, setHook] = useState(0);
+  useEffect(() => {
+    console.log("Hooks1---------------", hook);
+    setHook(hook + 1);
+    console.log("Hooks2---------------", hook);
+    setTimeout(() => {
+      console.log("Hooks333---------------", hook);
+    }, 0);
+  }, []);
   return (
     <>
+      <Three />
+      <div>------------------------</div>
+
+      {hook}
+      <div>------------------------</div>
       <Interaction />
       <div>------------------------</div>
-      
+
       <Self />
       <div>------------------------</div>
 
@@ -130,6 +143,7 @@ function Hooks() {
 
       <div>&& 操作符</div>
       <PackingList />
+      <div>------------------------</div>
     </>
   );
 }
