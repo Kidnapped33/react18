@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import List from "./filterData/MapData";
 import Self from "./Self";
-
-
+import Interaction from "./AddInteraction/Interaction";
 
 // useEffect
 function Effect() {
@@ -105,6 +104,9 @@ function Hooks() {
   // useEffect
   return (
     <>
+      <Interaction />
+      <div>------------------------</div>
+      
       <Self />
       <div>------------------------</div>
 
