@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import List from "./filterData/MapData"
 
 // useEffect
 function Effect() {
@@ -71,11 +72,27 @@ function State() {
       <div>{user.id}</div>
       <div>{user.username}</div>
       <div>{user.email}</div>
-      <button onClick={()=>{updateUserData('HHHHH')}}>更新 username</button>
+      <button
+        onClick={() => {
+          updateUserData("HHHHH");
+        }}
+      >
+        更新 username
+      </button>
       <br />
       changeArray
-      <div>{arr.map((item,index) => <li key={index}>{item}</li>)}</div>
-      <button onClick={()=>{changeArr(100)}}>push 100</button>
+      <div>
+        {arr.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </div>
+      <button
+        onClick={() => {
+          changeArr(100);
+        }}
+      >
+        push 100
+      </button>
     </>
   );
 }
@@ -85,16 +102,25 @@ function Hooks() {
   // useEffect
   return (
     <>
+    <List/>
+      <div>------------------------</div>
+
       <div>hook useEffect</div>
       <Effect />
 
+      <div>------------------------</div>
+
       <div>hook State</div>
       <State />
+      
+      <div>------------------------</div>
 
       <div>function 方式</div>
       <A />
       <B />
+      <div>------------------------</div>
 
+      <div>&& 操作符</div>
       <PackingList />
     </>
   );
@@ -121,7 +147,7 @@ function PackingList() {
       <section>
         <h1>Sally Ride's Packing List</h1>
         <ul>
-          <Item name={"aaa"} isPacked={true}></Item>
+          <Item name="aaa" isPacked={true}></Item>
           <Item name={"bbb"} isPacked={false}></Item>
         </ul>
       </section>
