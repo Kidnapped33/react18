@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import List from "./filterData/MapData";
 import Self from "./Self";
 import Three from "./Three";
+import Form from "./updateData";
 import Interaction from "./AddInteraction/Interaction";
 
 // useEffect
@@ -112,6 +113,9 @@ function Hooks() {
   }, []);
   return (
     <>
+      <Form />
+      <div>------------------------</div>
+
       <Three />
       <div>------------------------</div>
 
