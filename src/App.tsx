@@ -5,8 +5,10 @@ import React from "react";
 import One from "./view/One/One";
 import Player from "./view/player/Player";
 import { ConfigProvider } from "antd";
+// import Hooks from "./view/hooks/Hook";
 
 function App() {
+  console.log('app')
   return (
     <div className="App">
       <ConfigProvider theme={{ token: { colorPrimary: "#519aba" } }}>
