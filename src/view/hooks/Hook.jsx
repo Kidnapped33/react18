@@ -43,7 +43,7 @@ function Effect() {
 // useState 普通值/array/object
 
 function State() {
-  // ----------------- object
+  // ----------------- update object
 
   const [user, setUser] = useState({
     id: 1,
@@ -51,27 +51,31 @@ function State() {
     email: "Amy@example.com",
   });
 
-  const updateUserData = (newUserName: string) => {
-    setUser((userData) => ({ ...user, username: newUserName }));
+  const updateUserData = (newUserName) => {
+    setUser({ ...user, username: newUserName });
   };
 
-  // ----------------- array
+  // ----------------- update array
 
   const [arr, setArr] = useState([10, 20, 30]);
 
-  // const changeArr = () => {
-  //   // setArr({...arr,arr.push(100)})
-  // }
+  const changeArr = (newValue) => {
+    setArr([...arr, newValue]);
+  };
 
   return (
     <>
       State
       <br />
       changeObject
+      <div>{user.id}</div>
       <div>{user.username}</div>
+      <div>{user.email}</div>
+      <button onClick={()=>{updateUserData('HHHHH')}}>更新 username</button>
       <br />
       changeArray
-      <div>{arr[0]}</div>
+      <div>{arr.map((item,index) => <li key={index}>{item}</li>)}</div>
+      <button onClick={()=>{changeArr(100)}}>push 100</button>
     </>
   );
 }
@@ -88,13 +92,42 @@ function Hooks() {
       <State />
 
       <div>function 方式</div>
-      <A/>
-      <B/>
+      <A />
+      <B />
+
+      <PackingList />
     </>
   );
 }
 
 export default Hooks;
+
+//&& 操作符
+
+function Item({ name, isPacked }) {
+  return (
+    <>
+      <li>
+        {name}
+        {isPacked && " --- yes"}
+      </li>
+    </>
+  );
+}
+
+function PackingList() {
+  return (
+    <>
+      <section>
+        <h1>Sally Ride's Packing List</h1>
+        <ul>
+          <Item name={"aaa"} isPacked={true}></Item>
+          <Item name={"bbb"} isPacked={false}></Item>
+        </ul>
+      </section>
+    </>
+  );
+}
 
 // function 方式一 普通函数
 
