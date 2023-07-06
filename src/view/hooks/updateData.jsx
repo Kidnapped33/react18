@@ -1,7 +1,20 @@
 import { useState } from "react";
+import { useImmer } from "use-immer";
 
 export default function Form() {
-  const [person, setPerson] = useState({
+  //------------------ useState
+  //   const [person, setPerson] = useState({
+  //     name: "Niki",
+  //     artwork: {
+  //       title: "Blue",
+  //       city: "上海",
+  //       image: "https://i.imgur.com/Sd1AgUOm.jpg",
+  //     },
+  //   });
+
+  //------------------ useImmer
+
+  const [person, updatePerson] = useImmer({
     name: "Niki",
     artwork: {
       title: "Blue",
@@ -11,20 +24,24 @@ export default function Form() {
   });
 
   const handleNameChange = (e) => {
-    setPerson({ ...person, name: e.target.value });
+    // setPerson({ ...person, name: e.target.value });
+    updatePerson((item)=>{item.name = e.target.value })
   };
 
   const handleTitleChange = (e) => {
-    setPerson({
-      ...person,
-      artwork: { ...person.artwork, title: e.target.value },
-    });
+    // setPerson({
+    //   ...person,
+    //   artwork: { ...person.artwork, title: e.target.value },
+    // });
+    updatePerson((item)=>{item.artwork.title = e.target.value })
   };
   const handleCityChange = (e) => {
-    setPerson({
-      ...person,
-      artwork: { ...person.artwork, city: e.target.value },
-    });
+    // setPerson({
+    //   ...person,
+    //   artwork: { ...person.artwork, city: e.target.value },
+    // });
+    updatePerson((item)=>{item.artwork.city = e.target.value })
+
   };
 
   return (
