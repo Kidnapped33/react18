@@ -35,10 +35,9 @@ function Interaction() {
         {" "}
         {showMore ? "hide" : "show"} details
       </button>
-      {showMore && <p>{sculpture.description}</p>}
-      {/* {showMore ? <p>{sculpture.description}</p> : ""} */}
+        {showMore && <p>{sculpture.description}</p>}
       <div>
-        {/* <img src={sculpture.url} alt={sculpture.alt} /> */}
+        <img src={sculpture.url} alt={sculpture.alt} />
       </div>
     </>
   );
