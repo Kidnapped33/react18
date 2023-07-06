@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
-import List from "./filterData/MapData"
+import List from "./filterData/MapData";
+import Self from "./Self";
+
+
 
 // useEffect
 function Effect() {
@@ -102,7 +105,10 @@ function Hooks() {
   // useEffect
   return (
     <>
-    <List/>
+      <Self />
+      <div>------------------------</div>
+
+      <List />
       <div>------------------------</div>
 
       <div>hook useEffect</div>
@@ -112,7 +118,7 @@ function Hooks() {
 
       <div>hook State</div>
       <State />
-      
+
       <div>------------------------</div>
 
       <div>function 方式</div>
