@@ -3,6 +3,7 @@ import List from "./filterData/MapData";
 import Self from "./Self";
 import Three from "./Three";
 import Form from "./updateData";
+import UpdateArray from "./UpdateArray";
 import Interaction from "./AddInteraction/Interaction";
 
 // useEffect
@@ -113,6 +114,9 @@ function Hooks() {
   }, []);
   return (
     <>
+      <UpdateArray />
+      <div>------------------------</div>
+
       <Form />
       <div>------------------------</div>
 
