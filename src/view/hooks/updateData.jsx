@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useImmer } from "use-immer";
 
 export default function Form() {
@@ -43,6 +43,14 @@ export default function Form() {
     updatePerson((item)=>{item.artwork.city = e.target.value })
 
   };
+
+  useEffect(() => {
+    // const id = setInterval(()=>{console.log('hi')},3000)
+
+    // 当组件不再挂载时，使用 useEffect 的 return 销毁它
+    
+    // return () => window.clearInterval()
+  },[])
 
   return (
     <>
