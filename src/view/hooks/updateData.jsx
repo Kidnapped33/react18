@@ -44,13 +44,13 @@ export default function Form() {
 
   };
 
-  useEffect(() => {
-    // const id = setInterval(()=>{console.log('hi')},3000)
+  // useEffect(() => {
+  //   // const id = setInterval(()=>{console.log('hi')},3000)
 
-    // 当组件不再挂载时，使用 useEffect 的 return 销毁它
+  //   // 当组件不再挂载时，使用 useEffect 的 return 销毁它
     
-    // return () => window.clearInterval()
-  },[])
+  //   // return () => window.clearInterval()
+  // },[])
 
   return (
     <>
