@@ -3,6 +3,7 @@ import List from "./filterData/MapData";
 import Self from "./Self";
 import Three from "./Three";
 import Form from "./updateData";
+import FromData from "./FromData";
 import UpdateArray from "./UpdateArray";
 import Interaction from "./AddInteraction/Interaction";
 
@@ -114,6 +115,9 @@ function Hooks() {
   }, []);
   return (
     <>
+      <FromData />
+      <div>------------------------</div>
+
       <UpdateArray />
       <div>------------------------</div>
 
