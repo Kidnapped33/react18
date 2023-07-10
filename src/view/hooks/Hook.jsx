@@ -5,6 +5,7 @@ import Three from "./Three";
 import Form from "./updateData";
 import FromData from "./FromData";
 import Stop from "./Stop";
+import Ref from "./Ref";
 import UpdateArray from "./UpdateArray";
 import Interaction from "./AddInteraction/Interaction";
 
@@ -116,6 +117,9 @@ function Hooks() {
   }, []);
   return (
     <>
+      <Ref />
+      <div>------------------------</div>
+      
       <Stop />
       <div>------------------------</div>
 
