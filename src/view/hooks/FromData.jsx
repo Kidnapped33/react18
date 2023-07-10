@@ -28,16 +28,12 @@ export function Form() {
     console.log("handleSubmit---", answer);
     setStatus("submitting");
     try {
-      const xxx = await submitForm(answer);
-      console.log(111111111111,xxx);
-
+      await submitForm(answer);
       setStatus("success");
-
-
     } catch (err) {
       setStatus("typing");
+      // 这里需要拿 err 的 message 才能拿到那个值
       setError(err.message);
-      console.log("err----", err.message);
     }
   };
 
@@ -62,14 +58,12 @@ export function Form() {
 
   function submitForm(answer) {
     return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        let shouldError = answer !== "深圳";
-        if (shouldError) {
-          reject(new Error("答案不对。再试试看吧！"));
-        } else {
-          resolve();
-        }
-      }, 0);
+      let shouldError = answer !== "深圳";
+      if (shouldError) {
+        reject(new Error("答案不对。再试试看吧！"));
+      } else {
+        resolve();
+      }
     });
   }
 }
