@@ -6,6 +6,8 @@ import Form from "./updateData";
 import FromData from "./FromData";
 import Stop from "./Stop";
 import Ref from "./Ref";
+import ExampleComponent from "./reduce";
+import ExampleComponent2 from "./reduce2";
 import UpdateArray from "./UpdateArray";
 import Interaction from "./AddInteraction/Interaction";
 
@@ -117,6 +119,10 @@ function Hooks() {
   }, []);
   return (
     <>
+      <ExampleComponent />
+      <div>------------------------</div>
+      <ExampleComponent2 />
+      <div>------------------------</div>
       <Ref />
       <div>------------------------</div>
       
