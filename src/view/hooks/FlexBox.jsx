@@ -2,14 +2,14 @@ import { useState } from "react";
 import "./FlexBox.css";
 
 function FlexBox() {
-  let [visitCard, setVisitCard] = useState(false);
+  const [isBottomDownVisible, setIsBottomDownVisible] = useState(true);
 
   const showPad = () => {
     console.log("showPad");
   };
 
   const onVisitCard = () => {
-    setVisitCard((visitCard = !visitCard));
+    setIsBottomDownVisible(!isBottomDownVisible);
   };
 
   return (
@@ -84,8 +84,8 @@ function FlexBox() {
             </div>
           </div>
 
-          {visitCard && (
-            <div className="bottom-down">
+         
+            <div className={`bottom-down ${isBottomDownVisible ? "" : "hidden"}`}>
               <div className="first">
                 <div>1</div>
                 <div>2</div>
@@ -97,7 +97,7 @@ function FlexBox() {
                 <div>6</div>
               </div>
             </div>
-          )}
+          
         </div>
       </div>
     </>
