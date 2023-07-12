@@ -7,6 +7,20 @@
   > .main {
     flex-grow: 1;
     overflow-y: auto;
+
+    > .test {
+      width: 200px;
+      background-color: rgb(237, 223, 223);
+    }
+    > .test-show {
+      transition: height 1s ease;
+      height: 200px;
+    }
+
+    > .test-hidden {
+      transition: height 1s ease;
+      height: 0px;
+    }
   }
   > .bottom {
     flex-shrink: 0;
@@ -47,7 +61,20 @@
       }
     }
 
+    /* @keyframes slideUp {
+      from {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    } */
+
     > .bottom-down {
+      /* transition: all 0.3s ease; */
+
       > .first {
         display: flex;
         justify-content: space-between;
@@ -70,12 +97,19 @@
           border-radius: 10px;
           width: 100px;
           height: 100px;
+          line-height: 1;
         }
       }
     }
 
-    > .hidden{
-        display:none
+    > .hidden {
+      transition: height 1s ease;
+      height: 0;
+    }
+
+    > .slide-in {
+      transition: height 1s ease;
+      height: 230px;
     }
   }
 }

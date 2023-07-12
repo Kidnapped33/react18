@@ -12,67 +12,18 @@ function FlexBox() {
     setIsBottomDownVisible(!isBottomDownVisible);
   };
 
+  const [visitTest, setVisitTest] = useState(true);
+
+  const onVisitTest = () => {
+    setVisitTest(!visitTest);
+  };
+
   return (
     <>
       <div className="context">
         <div className="main">
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
-          <div>main</div>
+          <button onClick={onVisitTest}>show</button>
+          <div className={`test ${visitTest ? "test-hidden" : "test-show"} `}></div>
         </div>
         <div className="bottom">
           <div className="bottom-up">
@@ -84,20 +35,22 @@ function FlexBox() {
             </div>
           </div>
 
-         
-            <div className={`bottom-down ${isBottomDownVisible ? "" : "hidden"}`}>
-              <div className="first">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-              </div>
-              <div className="second">
-                <div>4</div>
-                <div>5</div>
-                <div>6</div>
-              </div>
+          <div
+            className={`bottom-down ${
+              isBottomDownVisible ? "slide-in" : "hidden"
+            }`}
+          >
+            <div className="first">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
             </div>
-          
+            <div className="second">
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+            </div>
+          </div>
         </div>
       </div>
     </>
