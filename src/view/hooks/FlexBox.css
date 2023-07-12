@@ -71,7 +71,7 @@
       }
     }
 
-    /* @keyframes slideUp {
+    @keyframes slideUp {
       from {
         transform: translateY(100%);
         opacity: 0;
@@ -80,11 +80,9 @@
         transform: translateY(0);
         opacity: 1;
       }
-    } */
+    }
 
     > .bottom-down {
-      /* transition: all 0.3s ease; */
-
       > .first {
         display: flex;
         justify-content: space-between;
@@ -120,6 +118,11 @@
     > .slide-in {
       transition: height 1s ease;
       height: 230px;
+
+      /* animation-name: slideUp;
+      animation-duration: 3s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite; */
     }
   }
 }

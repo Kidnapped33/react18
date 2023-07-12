@@ -23,7 +23,7 @@ function FlexBox() {
       <div className="context">
         <div className="main">
           <button onClick={onVisitTest}>show</button>
-          <div className={`test ${visitTest ? "test-hidden" : "test-show"} `}></div>
+          <div className={`test ${visitTest ? "test-show" : "test-hidden"} `}></div>
 
           <div className="static-add">+</div>
         </div>
@@ -39,7 +39,7 @@ function FlexBox() {
 
           <div
             className={`bottom-down ${
-              isBottomDownVisible ? "slide-in" : "hidden"
+              isBottomDownVisible ? "hidden" : "slide-in"
             }`}
           >
             <div className="first">
