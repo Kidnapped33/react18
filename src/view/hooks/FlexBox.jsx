@@ -24,6 +24,8 @@ function FlexBox() {
         <div className="main">
           <button onClick={onVisitTest}>show</button>
           <div className={`test ${visitTest ? "test-hidden" : "test-show"} `}></div>
+
+          <div className="static-add">+</div>
         </div>
         <div className="bottom">
           <div className="bottom-up">
