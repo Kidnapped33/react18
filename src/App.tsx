@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <ConfigProvider theme={{ token: { colorPrimary: "#519aba" } }}>
-        <div>react test</div>
+        {/* <div>react test</div> */}
         {/* <Home></Home> */}
         {/* <One></One> */}
       </ConfigProvider>

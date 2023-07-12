@@ -9,6 +9,7 @@ import Ref from "./Ref";
 import ExampleComponent from "./reduce";
 import ExampleComponent2 from "./reduce2";
 import UpdateArray from "./UpdateArray";
+import FlexBox from "./FlexBox";
 import Interaction from "./AddInteraction/Interaction";
 
 // useEffect
@@ -119,7 +120,9 @@ function Hooks() {
   }, []);
   return (
     <>
-      <ExampleComponent />
+      <FlexBox />
+
+      {/* <ExampleComponent />
       <div>------------------------</div>
       <ExampleComponent2 />
       <div>------------------------</div>
@@ -169,7 +172,7 @@ function Hooks() {
 
       <div>&& 操作符</div>
       <PackingList />
-      <div>------------------------</div>
+      <div>------------------------</div> */}
     </>
   );
 }
