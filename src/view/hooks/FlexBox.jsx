@@ -8,8 +8,7 @@ function FlexBox() {
     console.log("showPad");
   };
 
-  const showCard = () => {
-    console.log("showCard");
+  const onVisitCard = () => {
     setVisitCard((visitCard = !visitCard));
   };
 
@@ -80,7 +79,7 @@ function FlexBox() {
             <div className="bottom-left">
               <input className="my-input" type="text" onClick={showPad}></input>
             </div>
-            <div className="more" onClick={showCard}>
+            <div className="more" onClick={onVisitCard}>
               +
             </div>
           </div>
